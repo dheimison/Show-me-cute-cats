@@ -10,8 +10,8 @@ class App extends Component {
   };
 
   setCategory = async e => {
-    if (e.target.checked) {
-      await this.setState({ choosedCategory: e.target.id });
+    if (e.target.value && e.target.value !== 'false') {
+      await this.setState({ choosedCategory: e.target.value });
     } else {
       await this.setState({ choosedCategory: '' });
     }
@@ -22,7 +22,10 @@ class App extends Component {
     return (
       <>
         <GlobalStyle />
-        <Categories />
+        <Categories
+          choosedCategory={choosedCategory}
+          setCategory={this.setCategory}
+        />
         <CatList />
       </>
     );
