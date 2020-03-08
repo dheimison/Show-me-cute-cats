@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import GlobalStyle from './styles';
+import Categories from './components/Categories';
+import CatList from './components/CatList';
+
+class App extends Component {
+  state = {
+    choosedCategory: '',
+  };
+
+  setCategory = async e => {
+    if (e.target.checked) {
+      await this.setState({ choosedCategory: e.target.id });
+    } else {
+      await this.setState({ choosedCategory: '' });
+    }
+  };
+
+  render() {
+    const { choosedCategory } = this.state;
+    return (
+      <>
+        <GlobalStyle />
+        <Categories />
+        <CatList />
+      </>
+    );
+  }
 }
 
 export default App;
