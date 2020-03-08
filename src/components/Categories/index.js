@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import PropTypes from 'prop-types';
+
 import { Sidebar, ListCategory, ButtonCategory } from './styles';
 
 export default class Categories extends Component {
@@ -43,3 +45,8 @@ export default class Categories extends Component {
     );
   }
 }
+
+Categories.propTypes = {
+  choosedCategory: PropTypes.string.isRequired,
+  setCategory: PropTypes.func.isRequired,
+};
