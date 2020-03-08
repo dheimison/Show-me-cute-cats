@@ -7,6 +7,7 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family: 'Anonymous Pro', monospace;
   }
 
   html, body {
