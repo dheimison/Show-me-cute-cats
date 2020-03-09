@@ -18,7 +18,7 @@ export default class CatList extends Component {
   }
 
   loadCats = async () => {
-    this.setState({ arrayCats: await this.requestAPI() });
+    this.setState({ showButton: false, arrayCats: await this.requestAPI() });
   };
 
   loadMore = async () => {
