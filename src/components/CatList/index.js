@@ -32,15 +32,14 @@ export default class CatList extends Component {
   };
 
   handleScroll = e => {
-    const result =
-      e.nativeEvent.srcElement.scrollHeight -
-      e.nativeEvent.srcElement.scrollTop;
+    const { scrollTop } = e.nativeEvent.srcElement;
+    const result = e.nativeEvent.srcElement.scrollHeight - scrollTop;
 
     const valueRef = e.nativeEvent.srcElement.clientHeight;
 
     const { showButton } = this.state;
 
-    if (result === valueRef && showButton !== true) {
+    if (result === valueRef && showButton !== true && scrollTop !== 0) {
       return this.setState({ showButton: true });
     }
     if (result !== valueRef && showButton === true) {
