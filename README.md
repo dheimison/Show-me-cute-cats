@@ -8,11 +8,20 @@
 <pre><code>git clone https://github.com/Dheimison/Show-me-cute-cats.git </code></pre>
 
 - Dentro da pasta clonada, inicie o projeto com:
-  <pre><code>yarn start</pre></code>
-ou
-  <pre><code>npm run start</pre></code>
+
+  <pre><code>
+  yarn start
+  </code></pre>
+  
+OU
+
+  <pre><code>
+  npm run start
+  </code></pre>
 
 - No seu navegador acesse:
-<pre><code>http://localhost:3000</pre></code>
+<pre><code>
+http://localhost:3000
+</code></pre>
 
 
