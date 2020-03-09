@@ -33,7 +33,7 @@ export default class Categories extends Component {
                 type="button"
                 onClick={e => setCategory(e)}
                 value={
-                  category.name === choosedCategory ? false : category.name
+                  String(category.id) === choosedCategory ? false : category.id
                 }
               >
                 {category.name}

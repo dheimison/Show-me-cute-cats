@@ -26,7 +26,7 @@ class App extends Component {
           choosedCategory={choosedCategory}
           setCategory={this.setCategory}
         />
-        <CatList />
+        <CatList choosedCategory={choosedCategory} />
       </>
     );
   }
