@@ -4,6 +4,10 @@
 ![Homepage](./assets/cuteCats.gif)
 
 ## Como iniciar o projeto:
+- Acesse : https://dheimison.github.io/Show-me-cute-cats/
+
+Ou
+
 - Clone o projeto na sua máquina usando o seguinte comando no seu terminal:
 <pre><code>git clone https://github.com/Dheimison/Show-me-cute-cats.git </code></pre>
 
