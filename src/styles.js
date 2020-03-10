@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   * {
@@ -21,5 +21,32 @@ export default createGlobalStyle`
     justify-content: space-between;
     height: 100%;
     background: #1D1D1F;
+
+    @media (max-width: 680px) {
+      justify-content: center;
+    }
+  }
+`;
+
+export const GlobalIcons = styled.div`
+  svg {
+    display: none;
+  }
+
+  @media (max-width: 680px) {
+    svg {
+      position: absolute;
+      left: 5%;
+      top: 25px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    .menu {
+      display: ${props => (props.modal ? 'none' : 'block')};
+    }
+
+    .closeMenu {
+      display: ${props => (props.modal ? 'block' : 'none')};
+    }
   }
 `;

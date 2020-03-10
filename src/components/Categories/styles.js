@@ -2,11 +2,19 @@ import styled, { css } from 'styled-components';
 
 export const Sidebar = styled.aside`
   height: 100%;
+  width: 35vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 120px;
+
+  @media (max-width: 680px) {
+    display: ${props => (props.modal ? 'flex' : 'none')};
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
 
   h2 {
     color: #fff;

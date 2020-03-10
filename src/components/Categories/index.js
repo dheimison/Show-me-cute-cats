@@ -22,9 +22,9 @@ export default class Categories extends Component {
 
   render() {
     const { categories } = this.state;
-    const { choosedCategory, setCategory } = this.props;
+    const { choosedCategory, setCategory, modal } = this.props;
     return (
-      <Sidebar>
+      <Sidebar modal={modal}>
         <h2>Categories</h2>
         <ListCategory>
           {categories.map(category => (
@@ -49,4 +49,5 @@ export default class Categories extends Component {
 Categories.propTypes = {
   choosedCategory: PropTypes.string.isRequired,
   setCategory: PropTypes.func.isRequired,
+  modal: PropTypes.bool.isRequired,
 };

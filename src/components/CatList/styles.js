@@ -11,6 +11,12 @@ export const Container = styled.main`
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 680px) {
+    width: 70vw;
+    margin: 20px 0 0 0;
+    }
+  }
+
   h1 {
     padding: 0 15px 0 15px;
   }
@@ -43,6 +49,10 @@ export const Container = styled.main`
     li {
       max-width: 300px;
       margin: 30px 0px 0px 20px;
+
+      @media (max-width: 680px) {
+        margin: 30px 0 0 5px;
+      }
 
       img {
         width: 100%;

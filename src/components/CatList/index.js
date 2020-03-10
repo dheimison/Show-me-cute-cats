@@ -11,7 +11,8 @@ export default class CatList extends Component {
   };
 
   componentDidUpdate(prevProps) {
-    if (this.props !== prevProps) {
+    const { choosedCategory } = this.props;
+    if (choosedCategory !== prevProps.choosedCategory) {
       return this.loadCats();
     }
     return null;
