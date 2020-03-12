@@ -33,8 +33,8 @@ export default class CatList extends Component {
   };
 
   handleScroll = e => {
-    const { scrollTop } = e.nativeEvent.srcElement;
-    const result = e.nativeEvent.srcElement.scrollHeight - scrollTop;
+    const { scrollTop, scrollHeight } = e.nativeEvent.srcElement;
+    const result = Math.round(scrollHeight) - Math.round(scrollTop);
 
     const valueRef = e.nativeEvent.srcElement.clientHeight;
 
@@ -46,6 +46,11 @@ export default class CatList extends Component {
     if (result !== valueRef && showButton === true) {
       return this.setState({ showButton: false });
     }
+    console.log('clientHeight :', e.nativeEvent.srcElement.clientHeight);
+    console.log('scrollTop : ', e.nativeEvent.srcElement.scrollTop);
+    console.log('scrollHeight :', e.nativeEvent.srcElement.scrollHeight);
+    console.log('lastChild :', e.nativeEvent.target.lastChild.offsetTop);
+    console.log(e.nativeEvent);
   };
 
   async requestAPI() {
