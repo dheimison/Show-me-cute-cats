@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Show-me-cute-cats/precache-manifest.f245093274d8dfa36bba0ab959c8de16.js"
+  "/Show-me-cute-cats/precache-manifest.417cee53f0995f7e0f07f4ef172e78e9.js"
 );
 
 self.addEventListener('message', (event) => {
