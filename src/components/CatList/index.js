@@ -46,11 +46,6 @@ export default class CatList extends Component {
     if (result !== valueRef && showButton === true) {
       return this.setState({ showButton: false });
     }
-    console.log('clientHeight :', e.nativeEvent.srcElement.clientHeight);
-    console.log('scrollTop : ', e.nativeEvent.srcElement.scrollTop);
-    console.log('scrollHeight :', e.nativeEvent.srcElement.scrollHeight);
-    console.log('lastChild :', e.nativeEvent.target.lastChild.offsetTop);
-    console.log(e.nativeEvent);
   };
 
   async requestAPI() {
